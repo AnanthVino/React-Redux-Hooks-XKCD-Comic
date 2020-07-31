@@ -11,15 +11,14 @@ let defaultState = {
 }
 
 const mainReducer = (state = defaultState, action)=>{
-    if(action.type ==='CURRENT_COMIC'){
+    switch (action.type) {
+    case 'CURRENT_COMIC':
         return {
             ...state,
             comic: action.comic
         }
-    }else{
-        return {
-            ...state
-        }
+    default:
+        return state
     }
 }
 

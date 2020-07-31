@@ -34,7 +34,7 @@ const Home = (props) => {
     <div>
         <header id="header">
           <div className="search-comic">
-            <input type="text" className="form-control w-25 pull-right" placeholder="Search comic" onBlur={(e) => searchComic(e.target.value)} />
+            <input type="text" className="form-control w-25 pull-right" placeholder="e.g. 123" onBlur={(e) => searchComic(e.target.value)} />
           </div>
           <div className="content text-center comic-title">
             <h2>{props.comic.title}</h2>
