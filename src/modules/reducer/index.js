@@ -7,15 +7,26 @@
  */
 
 let defaultState = {
-    comic: null
+    comic: null,
+    status: ''
 }
 
 const mainReducer = (state = defaultState, action)=>{
     switch (action.type) {
-    case 'CURRENT_COMIC':
+    case 'COMIC_REQUESTED':
+        return {
+            status: 'waiting'
+        }
+    case 'COMIC_RECEIVED':
         return {
             ...state,
-            comic: action.comic
+            status: 'received',
+            comic: action.payload
+        }
+    case 'COMIC_FAILED':
+        return {
+            status: 'failed', 
+            error: action.error
         }
     default:
         return state

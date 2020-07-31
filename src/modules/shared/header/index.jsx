@@ -15,9 +15,9 @@ export class Header extends Component {
       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
-            <a className="navbar-brand page-scroll" href="#">
-              Connex
-            </a>{" "}
+            <h3 className="navbar-brand">
+              CONNEX
+            </h3>
           </div>
         </div>
       </nav>
